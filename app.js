@@ -14,7 +14,14 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var mapRouter = require('./routes/map');
 
+var cors = require("cors");
+var corsOptions = {
+  origin: process.env.FRONTEND_URL.split(","),
+  optionsSuccessStatus: 200 // For legacy browser support
+}
+
 var app = express();
+app.use(cors(corsOptions));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

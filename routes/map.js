@@ -8,12 +8,12 @@ router.get('/getEarthquakeData', async (req, res, next) =>  {
         query: `SELECT e.type, e.geometry, e.properties
                 FROM earthquakes e`
     }
+
     const container = getContainer("mapContent", "earthquakes");
     const { resources } = await container.items.query(querySpec).fetchAll();
 
-    if (resources.length > 0) {
-        responseMessage = {reply: "data found", earthquakes: resources, }
-    }
+    responseMessage = {reply: "data found", earthquakes: resources}
+  
     
     res.json(responseMessage);
   });
