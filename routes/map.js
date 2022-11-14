@@ -18,5 +18,20 @@ router.get('/getEarthquakeData', async (req, res, next) =>  {
     res.json(responseMessage);
   });
 
+  router.get('/getLocations', async (req, res, next) =>  {
+    const querySpec = {
+        query: `SELECT l.name, l.type, l.coordinates
+                FROM locations l`
+    }
+
+    const container = getContainer("mapContent", "locations");
+    const { resources } = await container.items.query(querySpec).fetchAll();
+
+    responseMessage = {reply: "data found", locations: resources}
+  
+    
+    res.json(responseMessage);
+  });
+
 
 module.exports = router;
