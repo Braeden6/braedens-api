@@ -3,7 +3,7 @@ var router = express.Router();
 const validateJWT = require('../public/javascripts/verifyUser').validateJWT
 const getDecodedToken = require('../public/javascripts/verifyUser').getDecodedToken
 const findUser = require('../public/javascripts/findUser');
-const getContainer = require('../public/javascripts/getContainer');
+const getContainer = require('../public/javascripts/getContainer'); 
 
 router.post('/addUser',  async (req, res, next) =>  {
     let responseMessage = {reply:"something went wrong"};
