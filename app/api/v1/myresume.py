@@ -13,28 +13,28 @@ async def get_myresume():
     "name": "Braeden Norman",
     "email": "braeden.norman6@gmail.com",
     "phoneNumber": "778-668-9405",
-    "GitHub": "https://github.com/Braeden6",
-    "LinkedIn": "https://linkedin.com/in/braeden-norman-49665a157",
+    "Github": "https://github.com/Braeden6",
+    "LinkedIn": "https://linkedin.com/in/braeden6",
     "titleFacts": ["Computer Science BSc", "Bilingual","Engineering/Software Engineering Work Experience"],
     "sections": [
         {
             "sectionTitle": "Technical Skills",
-            "templateFunction": "getTechSkillTemplate",
-            "subsections": [
+            "templateType": "TechSkillTemplate",
+            "list": [
                 { 
                     "title" : "Programming Languages",
-                    "list": ["C", "C++", "Java", "TypeScript", "Python", "JavaScript", "HTML", "CSS",
+                    "descriptor": ["C", "C++", "Java", "TypeScript", "Python", "JavaScript", "HTML", "CSS",
                     "Visual Basic", "MATLAB", "R", "Julia", "JSX" ]
                 },{
                     "title" : "Technologies",
-                    "list": [ "IntelliJ", "Visual Studios", "Microsoft Office", "Azure", "Node.js",
+                    "descriptor": [ "IntelliJ", "Visual Studios", "Microsoft Office", "Azure", "Node.js",
                     "React", "Bootstrap", "Serverless Computing", "Cosmos DB" ] 
                 }]
         },
         {
             "sectionTitle": "Personal Projects",
-            "templateFunction": "getBasicTemplate",
-            "subsections": [
+            "templateType": "BasicTemplate",
+            "list": [
                     {
                         "title": "Sudoku Solver",
                         "date": "Aug 2022 - Current",
@@ -73,8 +73,8 @@ async def get_myresume():
         },
         {
             "sectionTitle": "Work Experience",
-            "templateFunction": "getBasicTemplate",
-            "subsections": [
+            "templateType": "BasicTemplate",
+            "list": [
                     {
                         "title": "Software Engineer", 
                         "subTitle": "Voronoi Health Analytics Inc.",
@@ -113,8 +113,8 @@ async def get_myresume():
         },
         {
             "sectionTitle": "Education",
-            "templateFunction": "getBasicTemplate",
-            "subsections": [
+            "templateType": "BasicTemplate",
+            "list": [
                 {
                     "title": "The University of British Columbia",
                     "subTitle": "Bachelor of Science- BS, Computer Science",
@@ -137,8 +137,8 @@ async def get_myresume():
         },
         {
             "sectionTitle": "Licenses & Certifications",
-            "templateFunction": "getBasicTemplate",
-            "subsections": [
+            "templateType": "BasicTemplate",
+            "list": [
                 {
                     "title": "Machine Learning with Python: A Practical Introduction - IBM ",
                     "subTitle": "Credential ID d8efcd09c8fb43f5af86b02a11c2704e",
