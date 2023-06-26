@@ -52,7 +52,3 @@ jobs:
             --platform managed \
             --allow-unauthenticated \
             --port 8000  # Set the port to your application's port
-
-    - name: Map Custom Domain
-      run: |
-        gcloud beta run domain-mappings create --service ${{ env.SERVICE_NAME }} --domain backend.braedensconsulting.com --region ${{ env.REGION }}
