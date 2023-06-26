@@ -1,10 +1,20 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+# Use the official Python image as a parent image
+FROM python:3.11-slim-buster
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code into the container
 COPY . .
-EXPOSE 7071
-RUN chown -R node /usr/src/app
-USER node
-CMD ["npm", "start"]
+
+# Expose port 80 for the application
+EXPOSE 8000
+
+# Start the application
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
