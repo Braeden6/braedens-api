@@ -23,12 +23,13 @@ async def get_myresume():
             "list": [
                 { 
                     "title" : "Programming Languages",
-                    "descriptor": ["C", "C++", "Java", "TypeScript", "Python", "JavaScript", "HTML", "CSS",
-                    "Visual Basic", "MATLAB", "R", "Julia", "JSX" ]
+                    "descriptor": "Python, TypeScript, JavaScript, Java, HTML, CSS",
                 },{
                     "title" : "Technologies",
-                    "descriptor": [ "IntelliJ", "Visual Studios", "Microsoft Office", "Azure", "Node.js",
-                    "React", "Bootstrap", "Serverless Computing", "Cosmos DB" ] 
+                    "descriptor": "Docker, Kubernetes, GCP, Azure, OpenAI, LangChain, GitHub" 
+                }, {
+                    "title" : "Framework",
+                    "descriptor": "FastAPI, Node.js, React, MUI, Firebase, Next.js"
                 }]
         },
         {
@@ -36,45 +37,51 @@ async def get_myresume():
             "templateType": "BasicTemplate",
             "list": [
                     {
-                        "title": "Sudoku Solver",
-                        "date": "Aug 2022 - Current",
-                        "list": ["Made a Sudoku solver app, in which you can use multiple different algorithms to solve sudoku puzzles to test and compare process speed",
-                            "Implemented solver with search tree, breadth-first search and depth-first search, and other heuristics to speed up process time",
-                            "Created a GUI with pyside6 that displays step-by-step solutions and allows you to solve puzzles yourself"],
-                        "technologies":    [ "Python", "Pyside6", "Pandas", "Numpy", "Github"] 
+                        "title": "Personal Website",
+                        "date": "Sep 2022 – Current",
+                        "list": ["Made a personal website with my resume, resume builder, and a map viewer",
+                            "Deployed through GitHub CI/CD workflows on Azure Web App in a docker container",
+                            "Implemented a frontend app using React with Bootstrap for styling",
+                            "Developed a Node.js/Express.js backend with a RESTful API for user verification (JWT), data manipulation, and display in a resume builder and map from a Cosmos NoSQL Database"],
+                        "technologies":    [ "React, Bootstrap, Azure, CosmosDB, JavaScript, HTML, CSS, Node.js, Docker, CI/CD, GitHub, JSON/GeoJSON, NoSQL, RESTful API"] 
 
                     },
+                    {
+                        "title": "The Programming Lab",
+                        "date": "Feb – Current",
+                        "list": ["Designed an auto-deploy platform for web development learning, leveraging GKE, Docker containers, and microservices architecture",
+                            "Developed a FastAPI microservice to automatically build repositories and deploy them to the cluster, streamlining the deployment process",
+                            "Utilized an ingress to expose the path, ensuring seamless accessibility for users",
+                            "Committed to open-source principles, making all components and documentation publicly available",
+                             "Created detailed documentation to facilitate understanding, enabling users to learn from the project's structure and processes" ],
+                        "technologies" : ["Google Cloud, Kubernetes, CI/CD, FastAPI, Python, Microservices, Docker, GitHub APIs"]
+                    }, 
                     {
                         "title": "Convolution Neural Net (CNN) Recognition",
                         "date": "Feb - Apr 2021",
                         "list": ["Made a game recognition program to detect inputs and determine responses",
                             "Took screen images, converted them to 8-bit black and white, and ran it through a CNN to identify the highest probability of the best response",
                             "Used multiprocessing to complete tasks in parallel"],
-                        "technologies" : ["Python", "Scikit-learn", "GitHub", "PIL", "Pandas", "Multiprocessing"]
+                        "technologies" : ["Python, Scikit-learn, GitHub, PIL, Pandas, Multiprocessing"]
                     },
-                    {
-                        "title": "Maze Game",
-                        "date": "Mar - Apr 2020",
-                        "list": ["Developed a game where a player moves around a randomly generated map to interface with items",
-                            "Utilized a visual-based system to give maximum view distance (fog of war)",
-                            "Created and displayed visuals with a GUI using JFrame utilizing a constant update timer for visual rendering",
-                            "Used JUnit for Unit testing to build a more robust bug-free game" ],
-                        "technologies" : ["GitHub", "Java", "JUnit", "IntelliJ", "Swing"]
-                    }, 
-                    {
-                        "title": "Map Drawer",
-                        "date": "Jan - Apr 2020",
-                        "list": ["Created a display system synced over multiple computers using a Socket and Server",
-                        "Displayed a map where a dedicated user could reveal or cover up portions of the map using a drawing tool",
-                        "Included Swing GUI that has a tools menu such as changing from drawing and erasing along with selecting draw size "],
-                        "technologies" : ["Java", "Socket", "IntelliJ"]
-                    }
+                    
                 ]
         },
         {
             "sectionTitle": "Work Experience",
             "templateType": "BasicTemplate",
             "list": [
+                {
+                    "title": "Full Stack Software Engineer",
+                    "subTitle": "HCL Tech",
+                    "date": "May - Aug 2021",
+                    "list": [
+                        "Developed API and database structure for an internal web developer blog platform, utilizing Java Spring Boot and MySQL for efficient data management",
+                        "Utilized Agile development and JIRA for effective collaboration and timely milestones",
+                        "Implemented a FastAPI-based Python microservice for image cropping, integrating Google Image APIs and Google Cloud Storage via RESTful APIs",
+                        "Developed and designed internal Generative AI tools for authoring website"
+                    ]
+                },
                     {
                         "title": "Software Engineer", 
                         "subTitle": "Voronoi Health Analytics Inc.",
