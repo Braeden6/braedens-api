@@ -6,10 +6,12 @@ load_dotenv()
 
 
 from app.api.v1.myresume import router as myresume_router
+from app.api.v1.map import router as map_router
 
 app = FastAPI()
 
 app.include_router(myresume_router, prefix="/api/v1")
+app.include_router(map_router, prefix="/api/v1")
 
 
 
