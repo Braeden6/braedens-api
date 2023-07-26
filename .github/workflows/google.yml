@@ -51,5 +51,5 @@ jobs:
             --region ${{ env.REGION }} \
             --platform managed \
             --allow-unauthenticated \
-            --service-account mainsa@personal-website-610c4.iam.gserviceaccount.com
+            --service-account mainsa@personal-website-610c4.iam.gserviceaccount.com \
             --port 8000  # Set the port to your application's port
