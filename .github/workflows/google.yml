@@ -5,11 +5,11 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: the-programming-lab-390922
+  PROJECT_ID: personal-website-610c4
   SERVICE_NAME: backend
   REPO_NAME: braedens-personal-website
   REGION: us-central1
-  IMAGE: us-central1-docker.pkg.dev/the-programming-lab-390922/braedens-personal-website/backend
+  IMAGE: us-central1-docker.pkg.dev/personal-website-610c4/braedens-personal-website/backend
 
 jobs:
   setup-build-publish-deploy:
